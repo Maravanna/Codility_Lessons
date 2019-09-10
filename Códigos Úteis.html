@@ -1,0 +1,104 @@
+<script>
+    //Percorrer
+    function iterate() {
+        let A = new Array(3).fill(0);
+        for (let i = 0; i < A.length; i++) {
+
+        }
+
+        A.forEach((item, index, array) => {
+
+        });
+    }
+    
+    //Lesson 10 - Prime and composite numbers
+    function numberOfDivisors(N) {
+        var i = 1, result = 0;
+        while (i * i < N) {
+            if (N % i == 0) {
+                result += 2;
+            }
+            i++;
+        }
+        if (i * i == N) {
+            result++;
+        }
+        return result;
+    }
+
+    function isPrime(N) {
+        var i = 1, result = 0;
+        while (i * i < N) {
+            if (N % i == 0) {
+                return false;
+            }
+            i++;
+        }
+        return true;
+    }
+
+    //Lesson 11 - Sieve of Eratosthenes
+    function sieve(N) {
+        var sieve = new Array(N + 1).fill(true);
+        sieve[0] = sieve[1] = false;
+        var i = 2, k;
+
+        while (i * i <= N) {
+            if (sieve[i]) {
+                k = i * i;
+                while (k <= N) {
+                    sieve[k] = false;
+                    k += i;
+                }
+            }
+            i++;
+        }
+
+        var primes = new Array();
+        for (let x = 2; x <= N; x++) {
+            if (sieve[x]) {
+                primes.push(x);
+            }
+        }
+
+        return primes;
+    }
+
+    // Lesson 12
+    // greatest common divisor (gcd) - MDC
+    function gcd(a, b) {
+        if (a % b == 0) {
+            return b;
+        }
+        else {
+            return gcd(b, a % b)
+        }
+    }
+
+    function gcd2(a, b, res) {
+        debugger;
+        if (a == b) {
+            return res * a;
+        }
+        else if (a % 2 == 0 && b % 2 == 0) {
+            return gcd(Math.floor(a / 2), Math.floor(b / 2), 2 * res);
+        }
+        else if (a % 2 == 0) {
+            return gcd(Math.floor(a / 2), b, res);
+        }
+        else if (b % 2 == 0) {
+            return gcd(a, Math.floor(b / 2), res);
+        }
+        else if (a > b) {
+            return gcd(a - b, b, res);
+        }
+        else {
+            return gcd(a, b - a, res);
+        }
+    }
+
+    //Least common multiple (lcm) - MMC
+    function lcm(a, b) {
+        return ((a * b) / gcd(a, b));
+    }
+</script>
