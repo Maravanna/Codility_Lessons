@@ -18,5 +18,4 @@ function solution(A) {
 solution([0, 1, 0, 1, 1]);
 // expected 5
 
-
 // https://app.codility.com/demo/results/training57KT4K-HDQ/

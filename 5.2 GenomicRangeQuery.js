@@ -47,4 +47,5 @@ solution('CAGCCTA', [2, 5, 0], [4, 5, 6]);
 solution('A', [0], [0]);
 // expected [1]
 
+
 // https://app.codility.com/demo/results/trainingN9YJPF-PBK/
