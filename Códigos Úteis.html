@@ -1,6 +1,10 @@
 <script>
     let min = Number.MAX_SAFE_INTEGER;
 
+    // Remove elementos repetidos
+    let A = [1, 2, 2, 3];
+    let A = [...new Set(A)];
+
     //Percorrer
     function iterate() {
         let A = new Array(3).fill(0);
