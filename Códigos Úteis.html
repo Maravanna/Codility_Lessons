@@ -1,6 +1,9 @@
 <script>
     let min = Number.MAX_SAFE_INTEGER;
 
+    // Convert string to Array
+    binary = binary.split("");
+
     // Remove elementos repetidos
     let A = [1, 2, 2, 3];
     let A = [...new Set(A)];
@@ -21,13 +24,6 @@
     // convert int to binary
     var integer = 20;
     var binary = integer.toString(2)
-
-    // Convert string to Array
-    binary = binary.split("");
-
-
-
-    //Lesson 3
 
     //Lesson 10 - Prime and composite numbers
     function numberOfDivisors(N) {
