@@ -23,7 +23,6 @@ function solution(S, P, Q) {
 
     let result = [];
     for (let i = 0; i < P.length; i++) {
-        debugger;
         if (sumA[Q[i]+1] - sumA[P[i]] > 0) {
             result.push(1);
         }
@@ -48,4 +47,4 @@ solution('A', [0], [0]);
 // expected [1]
 
 
-// https://app.codility.com/demo/results/trainingN9YJPF-PBK/
+// https://app.codility.com/demo/results/trainingNBZBUC-VYU/

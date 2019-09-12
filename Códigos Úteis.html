@@ -25,6 +25,21 @@
     var integer = 20;
     var binary = integer.toString(2)
 
+    // Lesson 6
+    // sorting
+
+    // String
+    A.sort();
+
+    // Positive Numbers
+    A.sort((a, b) => { return a - b});
+
+    // All Numbers
+    // verificar
+    A.sort((a, b) => {
+        return a - b > 0 ? 1 : -1;
+    })
+
     //Lesson 10 - Prime and composite numbers
     function numberOfDivisors(N) {
         var i = 1, result = 0;
@@ -90,7 +105,6 @@
     }
 
     function gcd2(a, b, res) {
-        debugger;
         if (a == b) {
             return res * a;
         }
