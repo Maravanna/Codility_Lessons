@@ -1,5 +1,4 @@
 function solution(A) {
-    debugger;
     let count = 0;
     let endCircle = new Array(A.length).fill(0);
     let ini;
@@ -8,7 +7,7 @@ function solution(A) {
             count += A[i];
         }
         else {
-            count += A.length - i;
+            count += A.length -1 - i;
         }
 
         if (i + A[i] < A.length) {
@@ -31,3 +30,5 @@ function solution(A) {
 
 solution([1, 5, 2, 1, 4, 0]);
 // expected 11
+
+// https://app.codility.com/demo/results/trainingNUX64N-AH5/
