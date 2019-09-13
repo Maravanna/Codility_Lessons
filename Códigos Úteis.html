@@ -48,6 +48,15 @@
     A.shift();  // remove from the beginning
 
 
+    // Lesson 9
+    // Maximum Slice Problem
+    let maxEnding = 0, maxSlice = 0;
+    for(let i = 0; i < dif.length; i++){
+        maxSlice = Math.max(0, maxSlice + dif[i]);
+        maxEnding = Math.max(maxEnding, maxSlice);
+    }
+    
+
     //Lesson 10 - Prime and composite numbers
     function numberOfDivisors(N) {
         var i = 1, result = 0;
