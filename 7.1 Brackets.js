@@ -1,44 +1,51 @@
 function solution(S) {
     S = [...S];
-    let pile = [];
-    return S.forEach(e => {
-        debugger;
+    let stack = [];
+    let out = false;
+    for (e of S) {
         switch (e) {
-            case "(": pile.push("("); break;
-            case "{": pile.push("{"); break;
-            case "[": pile.push("["); break;
+            case "(": stack.push("("); break;
+            case "{": stack.push("{"); break;
+            case "[": stack.push("["); break;
             case ")":
-                if (pile[pile.length - 1] == "(") {
-                    pile.pop();
+                if (stack[stack.length - 1] == "(") {
+                    stack.pop();
                 }
                 else {
-                    return 0;
+                    out = true;
                 }
                 break;
-            case "}": 
-                if (pile[pile.length - 1] == "{") {
-                    pile.pop();
+            case "}":
+                if (stack[stack.length - 1] == "{") {
+                    stack.pop();
                 }
                 else {
-                    return 0;
+                    out = true;
                 }
                 break;
-            case "]": 
-                if (pile[pile.length - 1] == "]") {
-                    pile.pop();
+            case "]":
+                if (stack[stack.length - 1] == "[") {
+                    stack.pop();
                 }
                 else {
-                    return 0;
+                    out = true;
                 }
                 break;
         }
-    });
-
-    return 1;
+        if (out) {
+            return 0;
+        }
+    };
+    if (stack.length == 0) {
+        return 1;
+    }
+    else return 0;
 }
 
-// solution('{[()()]}');
+solution('{[()()]}');
 // expected 1
 
 solution('([)()]');
 // expected 0
+
+// https://app.codility.com/demo/results/training29YZUW-NSA/
