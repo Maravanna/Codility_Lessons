@@ -4,7 +4,7 @@ function solution(A) {
     let max = B[B.length - 1];
     let vet = new Array(max + 1).fill(false);
     for(let i = 0; i < A.length; i++){
-    
+        f
     }
 }
 
