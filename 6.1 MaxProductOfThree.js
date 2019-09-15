@@ -5,7 +5,10 @@ function solution(A) {
     return Math.max(A[l-1] * A[l-2] * A[l-3], A[0] * A[1] * A[l-1]);
 }
 
-solution([-3, 1, 2, -2, 5, 6]);
+// solution([-3, 1, 2, -2, 5, 6]);
 // expected 60
+
+solution([-5, 4, 4, 3, -1]);
+// expected 48
 
 // https://app.codility.com/demo/results/trainingESHJN9-ACJ/
