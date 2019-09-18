@@ -1,38 +1,31 @@
 function solution(A, B) {
-    for(let i = 0; i < A.length; i++);{
-        let big = Math.max(A, B);
-        let small = Math.min(A, B);
+    let count = 0;
+    for (let i = 0; i < A.length; i++) {
+        let big = Math.max(A[i], B[i]);
+        let small = Math.min(A[i], B[i]);
         let div = gcd(big, small);
-        let primes = primesList(big);    
+
+        if (big === small || (check(big, div) && check(small, div))) {
+            count++;
+        }
     }
-    
-    console.log(primes);
-    return primes;
+
+    return count;
 }
 
-function primesList(N) {
-    let sieve = new Array(N + 1).fill(true);
-    sieve[0] = sieve[1] = false;
-    let i = 2, k;
-    while (i * i <= N) {
-        if (sieve[i]) {
-            k = i * i;
-            while (k <= N) {
-                sieve[k] = false;
-                k += i;
-            }
-        }
-        i++;
+function check(a, b) {
+    gcdA = gcd(a, b);
+    if (gcdA == 1) {
+        return false;
     }
-
-    let primes = [];
-    for(i = 0; i < sieve.length; i++){
-        if(sieve[i]){
-            primes.push(i);
-        }
+    else if (gcdA == a) {
+        return true;
     }
-    
-    return primes;
+    else {
+        a /= gcdA;
+        gcdA = gcd(a, gcdA);
+        return check(Math.max(a, gcdA), Math.min(a, gcdA));
+    }
 }
 
 function gcd(a, b) {
@@ -43,3 +36,8 @@ function gcd(a, b) {
         return gcd(b, a % b);
     }
 }
+
+solution([15, 10, 9], [75, 30, 5]);
+// expected 1
+
+// https://app.codility.com/demo/results/training4Q9JPJ-3JU/
