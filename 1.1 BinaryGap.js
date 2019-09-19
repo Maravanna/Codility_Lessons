@@ -18,3 +18,6 @@ function solution(N) {
 }
 
 solution(529);
+// expected 5
+
+// https://app.codility.com/demo/results/training6S8GVR-35V/

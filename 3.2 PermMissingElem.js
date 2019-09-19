@@ -13,3 +13,6 @@ function solution(A) {
 }
 
 solution([2, 3, 1, 5]);
+// expected 4
+
+// https://app.codility.com/demo/results/trainingT9TSAB-NVV/

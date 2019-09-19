@@ -7,7 +7,12 @@ function solution(A, K) {
 }
 
 solution([3, 8, 9, 7, 6], 3);
+// expected [9, 7, 6, 3, 8]
+
 solution([0, 0, 0], 1);
+// expected [0, 0, 0]
+
 solution([1, 2, 3, 4], 4);
+// expected [1, 2, 3, 4]
 
 // https://app.codility.com/demo/results/trainingKQAXW7-MXH/

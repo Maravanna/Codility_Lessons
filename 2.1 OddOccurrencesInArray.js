@@ -13,5 +13,6 @@ function solution(A) {
 }
 
 solution([9, 3, 9, 3, 9, 7, 9]);
+// expected 7
 
 // https://app.codility.com/demo/results/trainingS7SCKP-SVG/

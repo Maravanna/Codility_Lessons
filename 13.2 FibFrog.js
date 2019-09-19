@@ -9,7 +9,6 @@ function solution(A) {
         fibo[i] = fibo[i - 1] + fibo[i - 2];
     }
 
-    debugger;
     let B = new Array(A.length).fill(0);
     let result = 100001;
     for (let i = 0; i < B.length; i++) {

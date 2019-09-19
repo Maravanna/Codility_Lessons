@@ -16,3 +16,6 @@ function solution(A) {
 }
 
 solution([3, 1, 2, 4, 3]);
+// expected 1
+
+// https://app.codility.com/demo/results/trainingW959FK-GDN/
