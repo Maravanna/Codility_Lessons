@@ -146,4 +146,25 @@
     function lcm(a, b) {
         return ((a * b) / gcd(a, b));
     }
+
+    // Lesson 13
+    // creating a fibonacci list
+    let fibo = [1, 2];
+    for (let i = 2; fibo[i - 1] < N; i++) {
+        fibo[i] = fibo[i - 1] + fibo[i - 2];
+    }
+
+    // Lesson 14
+    // basic structure of a binary search
+    let mid = Math.trunc((max + min) / 2);
+    while (min < max) {
+        if (check(mid, K, A)) {
+            max = mid;
+        }
+        else {
+            min = mid + 1;
+        }
+        mid = Math.trunc((max + min) / 2);
+    }
+    return mid;
 </script>

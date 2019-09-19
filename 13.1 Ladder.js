@@ -11,7 +11,6 @@ function solution(A, B) {
         fibo[i] = (fibo[i - 1] + fibo[i - 2]) % Math.pow(2, maxB);
     }
 
-    debugger;
     let result = [];
     for (let i = 0; i < A.length; i++) {
         result.push(fibo[A[i]] % Math.pow(2, B[i]));
