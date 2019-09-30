@@ -10,5 +10,6 @@ function solution(A, B) {
 }
 
 solution([1, 3, 7, 9, 9], [5, 6, 8, 9, 10])
+// expected 3
 
 // https://app.codility.com/demo/results/trainingSKB4W3-5N3/
